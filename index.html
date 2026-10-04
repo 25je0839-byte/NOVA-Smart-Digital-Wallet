@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVA — Smart Digital Wallet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">N</div>
+        <div><strong>NOVA</strong><span>Smart Wallet</span></div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-page="dashboard"><span>⌂</span> Dashboard</button>
+        <button class="nav-item" data-page="wallet"><span>▣</span> My Wallet</button>
+        <button class="nav-item" data-page="transactions"><span>↕</span> Transactions</button>
+        <button class="nav-item" data-page="analytics"><span>◔</span> Analytics</button>
+        <button class="nav-item" data-page="goals"><span>◎</span> Goals</button>
+        <button class="nav-item" data-page="subscriptions"><span>◷</span> Subscriptions</button>
+        <button class="nav-item" data-page="settings"><span>⚙</span> Settings</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="demo-box">
+          <span class="dot"></span>
+          Demo mode
+          <small>No real money is moved</small>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">PERSONAL FINANCE</p>
+          <h1 id="pageTitle">Good evening, Bindu 👋</h1>
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn" id="themeBtn" title="Toggle theme">☾</button>
+          <button class="icon-btn" id="notifyBtn" title="Notifications">♢</button>
+          <div class="avatar">B</div>
+        </div>
+      </header>
+
+      <section class="page active" id="dashboard">
+        <div class="hero-grid">
+          <div class="balance-card">
+            <div class="card-top">
+              <span>Total balance</span>
+              <span class="chip">● LIVE DEMO</span>
+            </div>
+            <div class="balance" id="mainBalance">₹24,580</div>
+            <div class="balance-change">↑ 12.8% <span>vs last month</span></div>
+            <div class="balance-bottom">
+              <div><small>Available to spend</small><strong id="availableBalance">₹24,580</strong></div>
+              <div class="mini-progress"><span></span></div>
+            </div>
+          </div>
+
+          <div class="insight-card">
+            <div class="spark">✦</div>
+            <p class="eyebrow">NOVA INSIGHT</p>
+            <h2>You’re doing great.</h2>
+            <p>Your spending is <strong>18% lower</strong> than your monthly average. Keep it up!</p>
+            <button class="text-btn" data-page-link="analytics">View analytics →</button>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card"><span>↗ Income</span><strong>₹25,000</strong><small class="positive">+8.2%</small></div>
+          <div class="stat-card"><span>↘ Expenses</span><strong>₹3,370</strong><small class="negative">-4.1%</small></div>
+          <div class="stat-card"><span>◎ Savings</span><strong>₹21,630</strong><small class="positive">+16.4%</small></div>
+          <div class="stat-card"><span>♥ Health</span><strong>86/100</strong><small class="positive">Excellent</small></div>
+        </div>
+
+        <div class="content-grid">
+          <div class="panel">
+            <div class="panel-head">
+              <div><p class="eyebrow">ACTIVITY</p><h2>Recent transactions</h2></div>
+              <button class="ghost-btn" data-page-link="transactions">View all</button>
+            </div>
+            <div class="transaction-list" id="recentTransactions"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <div><p class="eyebrow">SAVINGS</p><h2>Your goals</h2></div>
+              <button class="ghost-btn" data-page-link="goals">See all</button>
+            </div>
+            <div class="goal-mini"><div class="goal-row"><span>✈️ Goa Trip</span><strong>72%</strong></div><div class="progress"><span style="width:72%"></span></div><small>₹36,000 of ₹50,000</small></div>
+            <div class="goal-mini"><div class="goal-row"><span>🎧 Headphones</span><strong>84%</strong></div><div class="progress"><span style="width:84%"></span></div><small>₹8,400 of ₹10,000</small></div>
+            <button class="wide-btn" data-page-link="goals">＋ Create a goal</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="wallet">
+        <div class="section-head"><div><p class="eyebrow">YOUR MONEY</p><h2>My Wallet</h2><p>Manage your demo balance and virtual card.</p></div></div>
+        <div class="wallet-grid">
+          <div>
+            <div class="virtual-card" id="virtualCard">
+              <div class="card-face front">
+                <div class="vc-top"><strong>NOVA</strong><span>VIRTUAL</span></div>
+                <div class="card-number">•••• &nbsp; •••• &nbsp; •••• &nbsp; 4821</div>
+                <div class="vc-bottom"><span>BINDU</span><span>12/29</span></div>
+              </div>
+              <div class="card-face back">
+                <div class="magnetic"></div>
+                <div class="cvv">CVV&nbsp; 482</div>
+                <p>For demo purposes only.</p>
+              </div>
+            </div>
+            <button class="ghost-btn flip-btn" id="flipCardBtn">↻ Flip card</button>
+          </div>
+          <div class="wallet-panel">
+            <p class="eyebrow">CURRENT BALANCE</p>
+            <h2 id="walletBalance">₹24,580</h2>
+            <div class="wallet-actions"><button class="primary-btn" id="addMoneyBtn">＋ Add money</button><button class="secondary-btn" id="sendMoneyBtn">↗ Send money</button></div>
+            <div class="wallet-info"><div><span>Card status</span><strong class="positive">● Active</strong></div><div><span>Daily limit</span><strong>₹50,000</strong></div><div><span>Used today</span><strong>₹1,719</strong></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="transactions">
+        <div class="section-head"><div><p class="eyebrow">MONEY MOVEMENT</p><h2>Transactions</h2><p>Search and filter your demo transactions.</p></div></div>
+        <div class="panel">
+          <div class="filters"><input id="searchInput" class="search" placeholder="Search transactions..."><select id="typeFilter"><option value="all">All types</option><option value="income">Income</option><option value="expense">Expense</option></select></div>
+          <div class="transaction-list" id="allTransactions"></div>
+        </div>
+      </section>
+
+      <section class="page" id="analytics">
+        <div class="section-head"><div><p class="eyebrow">SPENDING INTELLIGENCE</p><h2>Analytics</h2><p>Understand where your money goes.</p></div></div>
+        <div class="analytics-grid">
+          <div class="panel chart-panel"><div class="panel-head"><div><p class="eyebrow">MONTHLY</p><h2>Cash flow</h2></div><span class="badge">Sep 2026</span></div><div class="bar-chart"><i style="height:42%"></i><i style="height:65%"></i><i style="height:52%"></i><i style="height:80%"></i><i style="height:58%"></i><i style="height:90%"></i><i style="height:72%"></i><i style="height:95%"></i><i style="height:68%"></i><i style="height:84%"></i><i style="height:60%"></i><i style="height:76%"></i></div><div class="months"><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span></div></div>
+          <div class="panel"><p class="eyebrow">BREAKDOWN</p><h2>Spending categories</h2><div class="category"><span>🍔 Food</span><strong>₹1,120</strong><div class="progress"><span style="width:62%"></span></div></div><div class="category"><span>🛒 Shopping</span><strong>₹1,299</strong><div class="progress"><span style="width:72%"></span></div></div><div class="category"><span>🎬 Entertainment</span><strong>₹649</strong><div class="progress"><span style="width:38%"></span></div></div><div class="category"><span>↗ Transfers</span><strong>₹500</strong><div class="progress"><span style="width:28%"></span></div></div></div>
+        </div>
+      </section>
+
+      <section class="page" id="goals">
+        <div class="section-head"><div><p class="eyebrow">FUTURE YOU</p><h2>Savings Goals</h2><p>Turn plans into progress.</p></div><button class="primary-btn" id="createGoalBtn">＋ Create goal</button></div>
+        <div class="goals-grid">
+          <div class="goal-card"><div class="goal-icon">✈️</div><h3>Goa Trip</h3><p>Travel fund</p><strong>₹36,000 <small>/ ₹50,000</small></strong><div class="progress"><span style="width:72%"></span></div><small>72% complete</small></div>
+          <div class="goal-card"><div class="goal-icon">🎧</div><h3>Headphones</h3><p>New gear</p><strong>₹8,400 <small>/ ₹10,000</small></strong><div class="progress"><span style="width:84%"></span></div><small>84% complete</small></div>
+          <div class="goal-card add-goal" id="addGoalCard"><div class="plus">＋</div><h3>Create a new goal</h3><p>Start saving for something you want.</p></div>
+        </div>
+      </section>
+
+      <section class="page" id="subscriptions">
+        <div class="section-head"><div><p class="eyebrow">RECURRING PAYMENTS</p><h2>Subscriptions</h2><p>Keep track of your monthly commitments.</p></div></div>
+        <div class="subs-grid">
+          <div class="sub-card"><div class="sub-logo netflix">N</div><div><h3>Netflix</h3><p>Entertainment · Monthly</p></div><strong>₹649</strong></div>
+          <div class="sub-card"><div class="sub-logo spotify">S</div><div><h3>Spotify</h3><p>Music · Monthly</p></div><strong>₹119</strong></div>
+          <div class="sub-card"><div class="sub-logo google">G</div><div><h3>Google One</h3><p>Storage · Monthly</p></div><strong>₹130</strong></div>
+        </div>
+        <div class="subscription-total panel"><span>Estimated monthly subscriptions</span><strong>₹898</strong></div>
+      </section>
+
+      <section class="page" id="settings">
+        <div class="section-head"><div><p class="eyebrow">PREFERENCES</p><h2>Settings</h2><p>Customize your NOVA demo experience.</p></div></div>
+        <div class="panel settings-list">
+          <div class="setting"><div><strong>Dark appearance</strong><span>Switch between light and dark mode.</span></div><label class="switch"><input type="checkbox" id="darkSwitch"><span></span></label></div>
+          <div class="setting"><div><strong>Payment notifications</strong><span>Show a toast after demo payments.</span></div><label class="switch"><input type="checkbox" checked><span></span></label></div>
+          <div class="setting"><div><strong>Demo mode</strong><span>All balances and payments are simulated locally.</span></div><label class="switch"><input type="checkbox" checked disabled><span></span></label></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" id="modal">
+      <button class="close-btn" id="closeModal">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
