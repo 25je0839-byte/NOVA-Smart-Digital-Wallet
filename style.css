@@ -1,1 +1,1297 @@
-*{box-sizing:border-box} :root{--bg:#f5f7fb;--panel:#fff;--text:#111827;--muted:#6b7280;--line:#e7eaf0;--accent:#635bff;--accent2:#8b5cf6;--good:#10b981;--bad:#ef4444;--shadow:0 14px 40px rgba(31,41,55,.07)} body.dark{--bg:#0d1117;--panel:#151a22;--text:#f4f7fb;--muted:#9aa4b2;--line:#262d38;--shadow:0 18px 50px rgba(0,0,0,.28)}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);transition:.2s}.app{display:flex;min-height:100vh}.sidebar{width:250px;background:var(--panel);border-right:1px solid var(--line);padding:25px 16px;display:flex;flex-direction:column;position:fixed;inset:0 auto 0 0}.brand{display:flex;gap:11px;align-items:center;padding:0 10px 30px}.brand-mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;display:grid;place-items:center;font-weight:800}.brand strong{display:block;font-size:16px}.brand span{display:block;color:var(--muted);font-size:11px;margin-top:2px}.nav{display:grid;gap:6px}.nav-item{border:0;background:transparent;color:var(--muted);padding:12px 13px;border-radius:11px;text-align:left;font:inherit;cursor:pointer;display:flex;gap:12px;align-items:center}.nav-item span{width:20px;text-align:center}.nav-item:hover,.nav-item.active{background:rgba(99,91,255,.10);color:var(--accent);font-weight:600}.sidebar-bottom{margin-top:auto}.demo-box{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:12px;font-size:12px;font-weight:600}.demo-box small{display:block;color:var(--muted);font-weight:400;margin-top:5px}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--good);margin-right:6px}.main{margin-left:250px;width:calc(100% - 250px);padding:30px 38px 50px}.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}.eyebrow{font-size:10px;letter-spacing:1.5px;color:var(--muted);font-weight:700;margin:0 0 6px}.topbar h1{margin:0;font-size:24px}.top-actions{display:flex;gap:9px;align-items:center}.icon-btn,.avatar{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--text);display:grid;place-items:center;cursor:pointer}.avatar{background:var(--text);color:var(--panel);font-weight:800;border:0}.page{display:none}.page.active{display:block}.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:18px}.balance-card{background:linear-gradient(135deg,#25214d,#635bff 72%,#8b5cf6);color:#fff;border-radius:22px;padding:27px;min-height:245px;box-shadow:0 20px 45px rgba(99,91,255,.25)}.card-top,.balance-bottom,.goal-row{display:flex;justify-content:space-between;align-items:center}.chip{font-size:9px;background:rgba(255,255,255,.14);padding:7px 10px;border-radius:999px}.balance{font-size:42px;font-weight:800;margin-top:30px;letter-spacing:-1px}.balance-change{font-size:13px;color:#b9f6df;margin-top:8px}.balance-change span{color:rgba(255,255,255,.65)}.balance-bottom{margin-top:36px}.balance-bottom small{display:block;color:rgba(255,255,255,.65);font-size:11px}.balance-bottom strong{display:block;margin-top:3px}.mini-progress{width:110px;height:6px;border-radius:99px;background:rgba(255,255,255,.18);overflow:hidden}.mini-progress span{display:block;width:72%;height:100%;background:#fff}.insight-card{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:27px;box-shadow:var(--shadow)}.spark{width:40px;height:40px;border-radius:13px;background:rgba(99,91,255,.1);color:var(--accent);display:grid;place-items:center;font-size:20px;margin-bottom:22px}.insight-card h2{margin:0 0 8px;font-size:22px}.insight-card p:not(.eyebrow){color:var(--muted);font-size:13px;line-height:1.7}.text-btn,.ghost-btn{border:0;background:transparent;color:var(--accent);font-weight:700;cursor:pointer;padding:0}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin:18px 0}.stat-card,.panel,.goal-card,.sub-card,.wallet-panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.stat-card{padding:19px}.stat-card span{display:block;color:var(--muted);font-size:12px}.stat-card strong{display:block;font-size:21px;margin:9px 0}.stat-card small{font-size:11px}.positive{color:var(--good)}.negative{color:var(--bad)}.content-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:18px}.panel{padding:22px}.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:17px}.panel h2,.section-head h2{font-size:19px;margin:0}.transaction-list{display:grid}.transaction{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}.transaction:last-child{border-bottom:0}.tx-icon{width:40px;height:40px;border-radius:12px;background:var(--bg);display:grid;place-items:center;font-size:17px}.tx-main{flex:1}.tx-main strong{font-size:13px;display:block}.tx-main small{color:var(--muted);font-size:11px}.tx-amount{font-size:13px;font-weight:700}.goal-mini{padding:13px 0;border-bottom:1px solid var(--line)}.goal-mini small{display:block;color:var(--muted);margin-top:7px;font-size:11px}.progress{height:7px;background:var(--bg);border-radius:99px;overflow:hidden;margin-top:9px}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:99px}.wide-btn{width:100%;margin-top:16px;padding:11px;border:1px dashed var(--line);background:transparent;color:var(--accent);border-radius:10px;font-weight:700;cursor:pointer}.section-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.section-head p:not(.eyebrow){color:var(--muted);font-size:13px;margin:7px 0 0}.primary-btn,.secondary-btn{border:0;border-radius:11px;padding:12px 16px;font:inherit;font-size:12px;font-weight:700;cursor:pointer}.primary-btn{background:var(--accent);color:white}.secondary-btn{background:var(--bg);color:var(--text);border:1px solid var(--line)}.wallet-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:22px;align-items:start}.virtual-card{height:265px;max-width:460px;perspective:1000px;cursor:pointer}.card-face{width:100%;height:100%;border-radius:23px;padding:27px;color:#fff;backface-visibility:hidden;position:absolute}.virtual-card{position:relative}.front{background:linear-gradient(135deg,#17152d,#635bff 65%,#9b7cff);transform:rotateY(0);transition:transform .6s}.back{background:linear-gradient(135deg,#292333,#0f1020);transform:rotateY(180deg);transition:transform .6s}.virtual-card.flipped .front{transform:rotateY(-180deg)}.virtual-card.flipped .back{transform:rotateY(0)}.vc-top,.vc-bottom{display:flex;justify-content:space-between}.vc-top span{font-size:9px;letter-spacing:2px;opacity:.7}.card-number{font-size:23px;letter-spacing:2px;margin-top:75px}.vc-bottom{margin-top:30px;font-size:11px;letter-spacing:1px}.magnetic{height:42px;background:#111;margin:20px -27px}.cvv{background:#fff;color:#111;text-align:right;padding:10px;border-radius:4px;font-size:12px}.back p{font-size:10px;opacity:.6;margin-top:25px}.flip-btn{margin-top:12px}.wallet-panel{padding:28px}.wallet-panel h2{font-size:40px;margin:10px 0 25px}.wallet-actions{display:flex;gap:10px}.wallet-info{margin-top:25px;border-top:1px solid var(--line)}.wallet-info div{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:12px}.wallet-info span{color:var(--muted)}.filters{display:flex;gap:10px;margin-bottom:18px}.search,select,.modal input{border:1px solid var(--line);background:var(--bg);color:var(--text);border-radius:10px;padding:11px 13px;font:inherit;font-size:12px;outline:none}.search{flex:1}select{min-width:130px}.analytics-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:18px}.badge{font-size:10px;background:var(--bg);padding:7px 9px;border-radius:8px;color:var(--muted)}.bar-chart{height:240px;display:flex;align-items:end;gap:12px;padding:20px 10px 5px;border-bottom:1px solid var(--line)}.bar-chart i{flex:1;max-width:30px;background:linear-gradient(180deg,var(--accent2),var(--accent));border-radius:8px 8px 0 0}.months{display:flex;justify-content:space-between;color:var(--muted);font-size:9px;padding:8px 2px}.category{display:grid;grid-template-columns:1fr auto;gap:7px;margin-top:19px;font-size:12px}.category .progress{grid-column:1/-1}.goals-grid,.subs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.goal-card{padding:23px}.goal-icon{font-size:28px}.goal-card h3{margin:14px 0 3px}.goal-card p{color:var(--muted);font-size:12px;margin:0 0 20px}.goal-card strong{font-size:18px}.goal-card strong small{font-size:11px;color:var(--muted);font-weight:500}.goal-card>small{display:block;color:var(--muted);font-size:11px;margin-top:8px}.add-goal{display:grid;place-items:center;text-align:center;cursor:pointer;border-style:dashed}.plus{font-size:28px;color:var(--accent)}.sub-card{padding:18px;display:flex;align-items:center;gap:14px}.sub-card h3{margin:0;font-size:14px}.sub-card p{margin:5px 0 0;color:var(--muted);font-size:11px}.sub-card>strong{margin-left:auto}.sub-logo{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;color:#fff;font-weight:800}.netflix{background:#e50914}.spotify{background:#1db954}.google{background:#4285f4}.subscription-total{margin-top:18px;display:flex;justify-content:space-between;align-items:center}.settings-list{padding:0}.setting{display:flex;justify-content:space-between;align-items:center;padding:22px;border-bottom:1px solid var(--line)}.setting:last-child{border-bottom:0}.setting strong{display:block;font-size:13px}.setting span:not(.switch span){display:block;color:var(--muted);font-size:11px;margin-top:5px}.switch{position:relative;width:45px;height:25px}.switch input{display:none}.switch span{position:absolute;inset:0;background:#d1d5db;border-radius:99px;cursor:pointer}.switch span:before{content:"";position:absolute;width:19px;height:19px;left:3px;top:3px;background:white;border-radius:50%;transition:.2s}.switch input:checked+span{background:var(--accent)}.switch input:checked+span:before{transform:translateX(20px)}.modal-backdrop{position:fixed;inset:0;background:rgba(8,10,18,.55);display:none;place-items:center;padding:20px;z-index:20}.modal-backdrop.show{display:grid}.modal{width:min(420px,100%);background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:25px;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.25)}.close-btn{position:absolute;right:15px;top:12px;border:0;background:transparent;color:var(--muted);font-size:25px;cursor:pointer}.modal h2{margin:0 0 6px}.modal p{color:var(--muted);font-size:12px}.modal form{display:grid;gap:12px;margin-top:18px}.modal label{font-size:11px;font-weight:700}.modal input{width:100%;margin-top:6px}.toast{position:fixed;right:25px;bottom:25px;background:#111827;color:#fff;padding:13px 17px;border-radius:11px;font-size:12px;transform:translateY(100px);opacity:0;transition:.25s;z-index:30}.toast.show{transform:translateY(0);opacity:1}@media(max-width:1050px){.hero-grid,.content-grid,.wallet-grid,.analytics-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}.goals-grid,.subs-grid{grid-template-columns:1fr 1fr}}@media(max-width:760px){.sidebar{position:static;width:100%;height:auto;border-right:0;border-bottom:1px solid var(--line)}.app{display:block}.sidebar .nav{grid-template-columns:repeat(4,1fr)}.sidebar-bottom{display:none}.main{margin:0;width:100%;padding:20px}.topbar h1{font-size:19px}.nav-item{font-size:10px;justify-content:center;flex-direction:column;gap:3px}.nav-item span{width:auto}.goals-grid,.subs-grid{grid-template-columns:1fr}.balance{font-size:34px}.stats-grid{gap:10px}.stat-card{padding:14px}.card-number{font-size:17px}.wallet-actions{flex-direction:column}.filters{flex-direction:column}}
+/* =========================================================
+   1. BASIC RESET AND COLOR VARIABLES
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #f5f7fb;
+    --panel: #fff;
+    --text: #111827;
+    --muted: #6b7280;
+    --line: #e7eaf0;
+    --accent: #635bff;
+    --accent2: #8b5cf6;
+    --good: #10b981;
+    --bad: #ef4444;
+    --shadow: 0 14px 40px rgba(31, 41, 55, .07);
+}
+
+
+/* =========================================================
+   2. DARK MODE VARIABLES
+   ========================================================= */
+
+body.dark {
+    --bg: #0d1117;
+    --panel: #151a22;
+    --text: #f4f7fb;
+    --muted: #9aa4b2;
+    --line: #262d38;
+    --shadow: 0 18px 50px rgba(0, 0, 0, .28);
+}
+
+
+/* =========================================================
+   3. BODY
+   ========================================================= */
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: .2s;
+}
+
+
+/* =========================================================
+   4. MAIN APP LAYOUT
+   ========================================================= */
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   5. SIDEBAR
+   ========================================================= */
+
+.sidebar {
+    width: 250px;
+    background: var(--panel);
+    border-right: 1px solid var(--line);
+    padding: 25px 16px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset: 0 auto 0 0;
+}
+
+
+/* =========================================================
+   6. BRAND
+   ========================================================= */
+
+.brand {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    padding: 0 10px 30px;
+}
+
+.brand-mark {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent2)
+    );
+    color: white;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+}
+
+.brand strong {
+    display: block;
+    font-size: 16px;
+}
+
+.brand span {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+
+/* =========================================================
+   7. NAVIGATION
+   ========================================================= */
+
+.nav {
+    display: grid;
+    gap: 6px;
+}
+
+.nav-item {
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    padding: 12px 13px;
+    border-radius: 11px;
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.nav-item span {
+    width: 20px;
+    text-align: center;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background: rgba(99, 91, 255, .10);
+    color: var(--accent);
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   8. SIDEBAR BOTTOM / DEMO BOX
+   ========================================================= */
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.demo-box {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.demo-box small {
+    display: block;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--good);
+    margin-right: 6px;
+}
+
+
+/* =========================================================
+   9. MAIN CONTENT AREA
+   ========================================================= */
+
+.main {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 30px 38px 50px;
+}
+
+
+/* =========================================================
+   10. TOP BAR
+   ========================================================= */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    font-weight: 700;
+    margin: 0 0 6px;
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.top-actions {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+}
+
+
+/* =========================================================
+   11. ICON BUTTONS AND AVATAR
+   ========================================================= */
+
+.icon-btn,
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--text);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.avatar {
+    background: var(--text);
+    color: var(--panel);
+    font-weight: 800;
+    border: 0;
+}
+
+
+/* =========================================================
+   12. PAGES
+   ========================================================= */
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+
+/* =========================================================
+   13. DASHBOARD HERO
+   ========================================================= */
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 18px;
+}
+
+
+/* =========================================================
+   14. BALANCE CARD
+   ========================================================= */
+
+.balance-card {
+    background: linear-gradient(
+        135deg,
+        #25214d,
+        #635bff 72%,
+        #8b5cf6
+    );
+    color: #fff;
+    border-radius: 22px;
+    padding: 27px;
+    min-height: 245px;
+    box-shadow: 0 20px 45px rgba(99, 91, 255, .25);
+}
+
+.card-top,
+.balance-bottom,
+.goal-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chip {
+    font-size: 9px;
+    background: rgba(255, 255, 255, .14);
+    padding: 7px 10px;
+    border-radius: 999px;
+}
+
+.balance {
+    font-size: 42px;
+    font-weight: 800;
+    margin-top: 30px;
+    letter-spacing: -1px;
+}
+
+.balance-change {
+    font-size: 13px;
+    color: #b9f6df;
+    margin-top: 8px;
+}
+
+.balance-change span {
+    color: rgba(255, 255, 255, .65);
+}
+
+.balance-bottom {
+    margin-top: 36px;
+}
+
+.balance-bottom small {
+    display: block;
+    color: rgba(255, 255, 255, .65);
+    font-size: 11px;
+}
+
+.balance-bottom strong {
+    display: block;
+    margin-top: 3px;
+}
+
+.mini-progress {
+    width: 110px;
+    height: 6px;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, .18);
+    overflow: hidden;
+}
+
+.mini-progress span {
+    display: block;
+    width: 72%;
+    height: 100%;
+    background: #fff;
+}
+
+
+/* =========================================================
+   15. INSIGHT CARD
+   ========================================================= */
+
+.insight-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 27px;
+    box-shadow: var(--shadow);
+}
+
+.spark {
+    width: 40px;
+    height: 40px;
+    border-radius: 13px;
+    background: rgba(99, 91, 255, .1);
+    color: var(--accent);
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    margin-bottom: 22px;
+}
+
+.insight-card h2 {
+    margin: 0 0 8px;
+    font-size: 22px;
+}
+
+.insight-card p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.text-btn,
+.ghost-btn {
+    border: 0;
+    background: transparent;
+    color: var(--accent);
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0;
+}
+
+
+/* =========================================================
+   16. STATISTICS CARDS
+   ========================================================= */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 18px 0;
+}
+
+.stat-card,
+.panel,
+.goal-card,
+.sub-card,
+.wallet-panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+.stat-card {
+    padding: 19px;
+}
+
+.stat-card span {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.stat-card strong {
+    display: block;
+    font-size: 21px;
+    margin: 9px 0;
+}
+
+.stat-card small {
+    font-size: 11px;
+}
+
+.positive {
+    color: var(--good);
+}
+
+.negative {
+    color: var(--bad);
+}
+
+
+/* =========================================================
+   17. CONTENT GRID
+   ========================================================= */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 18px;
+}
+
+
+/* =========================================================
+   18. PANELS
+   ========================================================= */
+
+.panel {
+    padding: 22px;
+}
+
+.panel-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+.panel h2,
+.section-head h2 {
+    font-size: 19px;
+    margin: 0;
+}
+
+
+/* =========================================================
+   19. TRANSACTION LIST
+   ========================================================= */
+
+.transaction-list {
+    display: grid;
+}
+
+.transaction {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.transaction:last-child {
+    border-bottom: 0;
+}
+
+.tx-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--bg);
+    display: grid;
+    place-items: center;
+    font-size: 17px;
+}
+
+.tx-main {
+    flex: 1;
+}
+
+.tx-main strong {
+    font-size: 13px;
+    display: block;
+}
+
+.tx-main small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.tx-amount {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   20. GOAL MINI CARDS
+   ========================================================= */
+
+.goal-mini {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.goal-mini small {
+    display: block;
+    color: var(--muted);
+    margin-top: 7px;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   21. PROGRESS BAR
+   ========================================================= */
+
+.progress {
+    height: 7px;
+    background: var(--bg);
+    border-radius: 99px;
+    overflow: hidden;
+    margin-top: 9px;
+}
+
+.progress span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        var(--accent),
+        var(--accent2)
+    );
+    border-radius: 99px;
+}
+
+
+/* =========================================================
+   22. WIDE BUTTON
+   ========================================================= */
+
+.wide-btn {
+    width: 100%;
+    margin-top: 16px;
+    padding: 11px;
+    border: 1px dashed var(--line);
+    background: transparent;
+    color: var(--accent);
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   23. SECTION HEADER
+   ========================================================= */
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.section-head p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 7px 0 0;
+}
+
+
+/* =========================================================
+   24. PRIMARY AND SECONDARY BUTTONS
+   ========================================================= */
+
+.primary-btn,
+.secondary-btn {
+    border: 0;
+    border-radius: 11px;
+    padding: 12px 16px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background: var(--accent);
+    color: white;
+}
+
+.secondary-btn {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--line);
+}
+
+
+/* =========================================================
+   25. WALLET PAGE
+   ========================================================= */
+
+.wallet-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 22px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   26. VIRTUAL CARD
+   ========================================================= */
+
+.virtual-card {
+    height: 265px;
+    max-width: 460px;
+    perspective: 1000px;
+    cursor: pointer;
+    position: relative;
+}
+
+.card-face {
+    width: 100%;
+    height: 100%;
+    border-radius: 23px;
+    padding: 27px;
+    color: #fff;
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.front {
+    background: linear-gradient(
+        135deg,
+        #17152d,
+        #635bff 65%,
+        #9b7cff
+    );
+    transform: rotateY(0);
+    transition: transform .6s;
+}
+
+.back {
+    background: linear-gradient(
+        135deg,
+        #292333,
+        #0f1020
+    );
+    transform: rotateY(180deg);
+    transition: transform .6s;
+}
+
+.virtual-card.flipped .front {
+    transform: rotateY(-180deg);
+}
+
+.virtual-card.flipped .back {
+    transform: rotateY(0);
+}
+
+
+/* =========================================================
+   27. VIRTUAL CARD CONTENT
+   ========================================================= */
+
+.vc-top,
+.vc-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vc-top span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    opacity: .7;
+}
+
+.card-number {
+    font-size: 23px;
+    letter-spacing: 2px;
+    margin-top: 75px;
+}
+
+.vc-bottom {
+    margin-top: 30px;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   28. BACK OF CARD
+   ========================================================= */
+
+.magnetic {
+    height: 42px;
+    background: #111;
+    margin: 20px -27px;
+}
+
+.cvv {
+    background: #fff;
+    color: #111;
+    text-align: right;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.back p {
+    font-size: 10px;
+    opacity: .6;
+    margin-top: 25px;
+}
+
+.flip-btn {
+    margin-top: 12px;
+}
+
+
+/* =========================================================
+   29. WALLET PANEL
+   ========================================================= */
+
+.wallet-panel {
+    padding: 28px;
+}
+
+.wallet-panel h2 {
+    font-size: 40px;
+    margin: 10px 0 25px;
+}
+
+.wallet-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.wallet-info {
+    margin-top: 25px;
+    border-top: 1px solid var(--line);
+}
+
+.wallet-info div {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 12px;
+}
+
+.wallet-info span {
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   30. TRANSACTION FILTERS
+   ========================================================= */
+
+.filters {
+    display: flex;
+    gap: 10px;
+}
+
+.search,
+select,
+.modal input {
+    border: 1px solid var(--line);
+    background: var(--bg);
+    color: var(--text);
+    border-radius: 10px;
+    padding: 11px 13px;
+    font: inherit;
+    font-size: 12px;
+    outline: none;
+}
+
+.search {
+    flex: 1;
+}
+
+select {
+    min-width: 130px;
+}
+
+
+/* =========================================================
+   31. ANALYTICS
+   ========================================================= */
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 18px;
+}
+
+.badge {
+    font-size: 10px;
+    background: var(--bg);
+    padding: 7px 9px;
+    border-radius: 8px;
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   32. BAR CHART
+   ========================================================= */
+
+.bar-chart {
+    height: 240px;
+    display: flex;
+    align-items: end;
+    gap: 12px;
+    padding: 20px 10px 5px;
+    border-bottom: 1px solid var(--line);
+}
+
+.bar-chart i {
+    flex: 1;
+    max-width: 30px;
+    background: linear-gradient(
+        180deg,
+        var(--accent2),
+        var(--accent)
+    );
+    border-radius: 8px 8px 0 0;
+}
+
+.months {
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 9px;
+    padding: 8px 2px;
+}
+
+
+/* =========================================================
+   33. CATEGORY BREAKDOWN
+   ========================================================= */
+
+.category {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 7px;
+    margin-top: 19px;
+    font-size: 12px;
+}
+
+.category .progress {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   34. GOALS PAGE
+   ========================================================= */
+
+.goals-grid,
+.subs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.goal-card {
+    padding: 23px;
+}
+
+.goal-icon {
+    font-size: 28px;
+}
+
+.goal-card h3 {
+    margin: 14px 0 3px;
+}
+
+.goal-card p {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 0 0 20px;
+}
+
+.goal-card strong {
+    font-size: 18px;
+}
+
+.goal-card strong small {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.goal-card > small {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   35. ADD GOAL CARD
+   ========================================================= */
+
+.add-goal {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    cursor: pointer;
+    border-style: dashed;
+}
+
+.plus {
+    font-size: 28px;
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   36. SUBSCRIPTIONS
+   ========================================================= */
+
+.sub-card {
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.sub-card h3 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.sub-card p {
+    margin: 5px 0 0;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.sub-card > strong {
+    margin-left: auto;
+}
+
+.sub-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-weight: 800;
+}
+
+.netflix {
+    background: #e50914;
+}
+
+.spotify {
+    background: #1db954;
+}
+
+.google {
+    background: #4285f4;
+}
+
+.subscription-total {
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* =========================================================
+   37. SETTINGS
+   ========================================================= */
+
+.settings-list {
+    padding: 0;
+}
+
+.setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px;
+    border-bottom: 1px solid var(--line);
+}
+
+.setting:last-child {
+    border-bottom: 0;
+}
+
+.setting strong {
+    display: block;
+    font-size: 13px;
+}
+
+.setting span:not(.switch span) {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   38. TOGGLE SWITCH
+   ========================================================= */
+
+.switch {
+    position: relative;
+    width: 45px;
+    height: 25px;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch span {
+    position: absolute;
+    inset: 0;
+    background: #d1d5db;
+    border-radius: 99px;
+    cursor: pointer;
+}
+
+.switch span:before {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    left: 3px;
+    top: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: .2s;
+}
+
+.switch input:checked + span {
+    background: var(--accent);
+}
+
+.switch input:checked + span:before {
+    transform: translateX(20px);
+}
+
+
+/* =========================================================
+   39. MODAL
+   ========================================================= */
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 10, 18, .55);
+    display: none;
+    place-items: center;
+    padding: 20px;
+    z-index: 20;
+}
+
+.modal-backdrop.show {
+    display: grid;
+}
+
+.modal {
+    width: min(420px, 100%);
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 25px;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, .25);
+}
+
+
+/* =========================================================
+   40. CLOSE BUTTON
+   ========================================================= */
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   41. MODAL CONTENT
+   ========================================================= */
+
+.modal h2 {
+    margin: 0 0 6px;
+}
+
+.modal p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.modal form {
+    display: grid;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.modal label {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.modal input {
+    width: 100%;
+    margin-top: 6px;
+}
+
+
+/* =========================================================
+   42. TOAST NOTIFICATION
+   ========================================================= */
+
+.toast {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background: #111827;
+    color: #fff;
+    padding: 13px 17px;
+    border-radius: 11px;
+    font-size: 12px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: .25s;
+    z-index: 30;
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* =========================================================
+   43. RESPONSIVE DESIGN
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .hero-grid,
+    .content-grid,
+    .wallet-grid,
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .goals-grid,
+    .subs-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =========================================================
+   44. RESPONSIVE DESIGN
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .app {
+        display: block;
+    }
+
+    .sidebar .nav {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .main {
+        margin: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .topbar h1 {
+        font-size: 19px;
+    }
+
+    .nav-item {
+        font-size: 10px;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .nav-item span {
+        width: auto;
+    }
+
+    .goals-grid,
+    .subs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .balance {
+        font-size: 34px;
+    }
+
+    .stats-grid {
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 14px;
+    }
+
+    .card-number {
+        font-size: 17px;
+    }
+
+    .wallet-actions {
+        flex-direction: column;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+}
